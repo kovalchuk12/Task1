@@ -43,9 +43,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Model.cs" />
+    <Compile Include="Factory and Model Catalogs\Model.cs" />
     <Compile Include="TaxisHierarchy\Car.cs" />
-    <Compile Include="FactoryManufacturer.cs" />
+    <Compile Include="Factory and Model Catalogs\FactoryManufacturer.cs" />
     <Compile Include="TaxisHierarchy\FreighTaxi.cs" />
     <Compile Include="TaxisHierarchy\PassengerTaxi.cs" />
     <Compile Include="Program.cs" />
