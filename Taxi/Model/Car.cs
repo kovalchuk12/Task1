@@ -25,9 +25,26 @@ namespace Taxi
         {
             FactoryManufacturer = factoryManufacturer;
             this._model = model;
+            if (year < 2000 || year >= 2020)
+            {
+                throw new ArgumentOutOfRangeException(nameof(year));
+            }
             this._year = year;
+            if (fuel < 0)
+            {
+                throw new ArgumentOutOfRangeException(nameof(fuel));
+            }
             this._fuel = fuel;
+            if (cost < 0)
+            {
+                throw new ArgumentOutOfRangeException(nameof(cost));
+            }
             Cost = cost;
+
+            if (speed < 0)
+            {
+                throw new ArgumentOutOfRangeException(nameof(speed));
+            }
             Speed = speed;
 
             Id = Guid.NewGuid();

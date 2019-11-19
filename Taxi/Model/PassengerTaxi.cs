@@ -14,6 +14,10 @@ namespace Taxi
 
         public PassengerTaxi(FactoryManufacturer factoryManufacturer, Model model, int year, double fuel, int cost, int speed, int passengers, bool babyCarSeat, bool airConditioning) : base(factoryManufacturer, model, year, fuel, cost, speed)
         {
+            if (passengers <= 0)
+            {
+                throw new ArgumentOutOfRangeException(nameof(cost));
+            }
             _passengers = passengers;
  
             _babyCarSeat = babyCarSeat;

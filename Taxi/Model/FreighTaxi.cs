@@ -12,6 +12,10 @@ namespace Taxi
 
         public FreightTaxi(FactoryManufacturer factoryManufacturer, Model model, int year, double fuel, int cost, int speed, int carryingCapasity) : base(factoryManufacturer, model, year, fuel, cost, speed)
         {
+            if (carryingCapasity <= 0)
+            {
+                throw new ArgumentOutOfRangeException(nameof(carryingCapasity));
+            }
             _carryingCapacity = carryingCapasity;
         }
         public override string ToString()
