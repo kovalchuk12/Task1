@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Taxi;
+
 
 namespace Taxi
 {
@@ -19,7 +16,7 @@ namespace Taxi
                 new FreightTaxi (FactoryManufacturer.Ford, Model.Transit, 2013, 11.6, 27100, 150, 3000),
                 new FreightTaxi (FactoryManufacturer.Iveco, Model.Dialy, 2017, 17, 40300, 190, 5000)
             };
-
+            
             Console.WriteLine("Calculating tati station cost ");
             double totalCost = TaxiStation.CalculateCostTaxistation(taxistation);
             Console.WriteLine($"Taxi station total cost is ${totalCost}");
@@ -33,7 +30,7 @@ namespace Taxi
             }
             Console.WriteLine();
 
-            Console.WriteLine("Find taxi by speed");
+        Console.WriteLine("Find taxi by speed");
             List<Car> findTaxiBySpeed = TaxiStation.FindBySpeed(taxistation, 180, 190);
             if (findTaxiBySpeed.Count == 0)
             {

@@ -14,16 +14,12 @@ namespace Taxi
 
         public PassengerTaxi(FactoryManufacturer factoryManufacturer, Model model, int year, double fuel, int cost, int speed, int passengers, bool babyCarSeat, bool airConditioning) : base(factoryManufacturer, model, year, fuel, cost, speed)
         {
-            if (passengers <= 0)
-            {
-                throw new ArgumentOutOfRangeException("The number of passengers cannot be negative.");
-            }
             _passengers = passengers;
  
             _babyCarSeat = babyCarSeat;
             _airConditioning = airConditioning;
         }
-        public override string Print()
+        public override string ToString()
         {
             return "Passenger Taxi: " + base.ToString() + $", Passengers : {_passengers}, Baby Car Seat : {_babyCarSeat}, Air Conditioning : {_airConditioning}";
         }
