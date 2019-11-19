@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Taxi
 {
-    enum FactoryManufacturer
+    public enum FactoryManufacturer
     {
         Citroen,
         Iveco,

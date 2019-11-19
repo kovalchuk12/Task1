@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Taxi
 {
-    enum Model
+    public enum Model
     {
         Almera,
         Accord,
